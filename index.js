@@ -1,4 +1,4 @@
-const button = document.querySelector("#tweet")
+const button = document.querySelector(".tweet")
 button.addEventListener("click", () => {
   var time = new Date()
   const content = {
