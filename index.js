@@ -2,7 +2,12 @@ const button = document.querySelector(".tweet")
 button.addEventListener("click", () => {
   var time = new Date()
   const content = {
-    text: "",
+    text:
+      "アカピーが" +
+      time.getHours +
+      "時" +
+      time.getMinutes +
+      "分をお知らせします。",
     tag: "アカピー時報"
   }
   for (let key in content) {
