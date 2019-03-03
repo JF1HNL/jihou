@@ -4,12 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>アカピー専用時報ボタン</title>
+    <title>時報ボタン</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-    <h3>時報ボタン</h3>
-    <br />
-    <input type="button" value="tweet" class="tweet" />
+    <div id="field">
+      <h1>{{ name }}の時報ボタン</h1>
+      Twitterでつぶやけます！<br>
+      時報する内容<br>
+      {{ tweet_text }} <br>
+      <button @click="tweet();">時報する</button><br>
+      <div v-if="!rename" @click="rename = true">名前を変更するときはこちら</div>
+      <div v-else>
+        ここに名前を記入<br>
+        <input v-model="name">
+      </div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
