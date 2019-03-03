@@ -16,17 +16,16 @@ let Field = new Vue({
   methods: {
     tweet: function(){
       const content = {
+        url: window.location.href,
         text: this.tweet_text,
         tag: "アカピー時報,時報"
       }
       for (let key in content) {
         content[key] = encodeURIComponent(content[key])
       }
-      let tweeturl =
-        "https://twitter.com/intent/tweet?text=" +
-        content.text +
-        "&hashtags=" +
-        content.tag
+      const tweeturl = `https://twitter.com/intent/tweet?url=${content.url}&text=${
+        content.text
+      }&hashtags=${content.tag}`;
       window.open(tweeturl)
     }
   }
