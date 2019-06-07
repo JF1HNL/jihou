@@ -4,23 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>アカピー時報</title>
 </head>
 <body>
   <script>
     var time = new Date();
     const content = {
-        url: window.location.href,
-        text:　"アカピーが" + time.getHours() +　"時" + time.getMinutes() + "分をお知らせします。",
-        tag: "アカピー時報,時報"
-      }
-      for (let key in content) {
-        content[key] = encodeURIComponent(content[key])
-      }
-      const tweeturl = `https://twitter.com/intent/tweet?url=${content.url}&text=${
-        content.text
-      }&hashtags=${content.tag}`;
-      location.href = tweeturl;
+      url: window.location.href,
+      text:　"アカピーが" + time.getHours() +　"時" + time.getMinutes() + "分をお知らせします。",
+      tag: "アカピー時報,時報"
+    }
+    for (let key in content) {
+      content[key] = encodeURIComponent(content[key])
+    }
+    const tweeturl = `https://twitter.com/intent/tweet?url=${content.url}&text=${
+      content.text
+    }&hashtags=${content.tag}`;
+    setTimeout(() => {
+      location.href = tweeturl;      
+    }, 500);
   </script>
 </body>
 </html>
