@@ -1,8 +1,8 @@
 let Field = new Vue({
   el: "#field",
   computed: {
-    tweet_text: function(){
-      var time = new Date();
+    tweet_text: function(e){
+      const time = this.now;
       return this.name + "が" + time.getHours() +
       "時" +
       time.getMinutes() +
@@ -11,7 +11,8 @@ let Field = new Vue({
   },
   data: {
     name: "アカピー",
-    rename: false
+    rename: false,
+    now: new Date()
   },
   methods: {
     tweet: function(){
@@ -30,3 +31,8 @@ let Field = new Vue({
     }
   }
 })
+
+setInterval(() => {
+  Field._data.now = new Date();
+  console.log("リフレッシュ");
+},5000)
