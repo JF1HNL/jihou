@@ -1,0 +1,18 @@
+.box{
+  border: solid 1px
+}
+.title{
+  font-size: 7vw
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65vw;
+  height: 65vh;
+  border: solid 3px;
+}
+.button div{
+  display: block;
+  font-size: 10vw;
+}

@@ -12,14 +12,19 @@
     <meta property="og:image" content="https://1.bp.blogspot.com/-UZtkSEX0wh4/U5l5_dNcEsI/AAAAAAAAhWs/UzJGVzyiX8Y/s800/kaichu_dokei.png" /> 
     <title>時報ボタン</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <div id="field">
-      <h1>{{ name }}の時報ボタン</h1>
-      Twitterでつぶやけます！<br>
-      時報する内容<br>
-      {{ tweet_text }} <br>
-      <button @click="tweet();">時報する</button><br>
+    <div id="field" align="center">
+      <div class="title">{{ name }}の時報ボタン</div>
+      <div>Twitterに時報しよう！</div>
+      <div class="box">
+        <div align="left">時報する内容</div>
+        <div>{{ tweet_text }}</div>
+      </div>
+      <div class="button" @click="tweet();">
+        <div>時報する！</div>
+      </div><br>
       <div v-if="!rename" @click="rename = true">名前を変更するときはこちら</div>
       <div v-else>
         ここに名前を記入<br>
