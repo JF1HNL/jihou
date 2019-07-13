@@ -36,3 +36,6 @@ setInterval(() => {
   Field._data.now = new Date();
   console.log("リフレッシュ");
 },5000)
+
+
+console.log('test')
