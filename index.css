@@ -1,16 +1,25 @@
+body{
+  color: blue;
+  background-color: gold;
+}
 .box{
-  border: solid 1px
+  border: solid 1px;
+  margin: 1vh;
 }
 .title{
-  font-size: 7vw
+  font-size: 7vw;
+  font-weight: bold;
+  color: red;
 }
 .button{
+  background-color: orange;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 65vw;
-  height: 65vh;
+  height: 65vw;
   border: solid 3px;
+  color: red;
 }
 .button div{
   display: block;
